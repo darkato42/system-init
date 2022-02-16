@@ -1,9 +1,16 @@
-```
-Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell
-```
-From the Powershell folder, I doubled clicked on ExecutionPolicy and changed the value to unrestricted
+# Developer Settings
 
-This is for setting up a Windows environment.
+1. Apply all File Explorer settings
+2. Change PowerShell execution policy
+
+# Enable Windows Optional Features
+
+```powershell
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupIIS.ps1'))
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupOtherWinFeatures.ps1'))
+```
+
+# Install 
 
 Run with:
 

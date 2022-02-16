@@ -44,6 +44,9 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/
 Install-FromChocolatey 'vscode'
 Install-FromChocolatey '7zip'
 Install-FromChocolatey 'autohotkey'
+$chocoToolsPath = ([System.Environment]::GetEnvironmentVariables('User')).ChocolateyToolsLocation
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/Capslock/master/win/CapsLock.ahk' -OutFile (Join-Path $chocoToolsPath 'CapsLock.ahk')
+
 Install-FromChocolatey 'greenshot'
 Install-FromChocolatey 'dotnetcore-sdk'
 Install-FromChocolatey 'microsoft-windows-terminal'
@@ -56,3 +59,4 @@ Install-FromChocolatey 'oh-my-posh'
 Install-FromChocolatey 'nvm'
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
+

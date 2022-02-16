@@ -27,7 +27,7 @@ function Install-PowerShellModule {
 
     if (!(Get-Command -Name $ModuleName -ErrorAction SilentlyContinue)) {
         Write-Host "Installing $ModuleName"
-        Install-Module -Name $ModuleName -Scope CurrentUser -Confirm $true
+        Install-Module -Module $ModuleName -Scope CurrentUser -Confirm $true
         Import-Module $ModuleName -Confirm
 
         Invoke-Command -ScriptBlock $PostInstall
@@ -39,7 +39,7 @@ function Install-PowerShellModule {
 Install-Chocolatey
 
 Install-FromChocolatey 'git'
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/master/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
 Install-FromChocolatey 'vscode'
 Install-FromChocolatey '7zip'
@@ -51,12 +51,8 @@ Install-FromChocolatey 'fiddler'
 Install-FromChocolatey 'postman'
 Install-FromChocolatey 'powershell-core'
 
-Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
-Install-PowerShellModule 'oh-my-posh' { }
-Install-PowerShellModule 'PSReadLine' { }
-Install-PowerShellModule 'nvm' {
-    Install-NodeVersion latest
-    Set-NodeVersion -Persist User latest
-}
+Install-FromChocolatey 'poshgit'
+Install-FromChocolatey 'oh-my-posh'
+Install-FromChocolatey 'nvm'
 
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/master/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE

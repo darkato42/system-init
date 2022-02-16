@@ -27,7 +27,7 @@ function Install-PowerShellModule {
 
     if (!(Get-Command -Name $ModuleName -ErrorAction SilentlyContinue)) {
         Write-Host "Installing $ModuleName"
-        Install-Module -Module $ModuleName -Scope CurrentUser -Confirm $true
+        Install-Module -Name $ModuleName -Confirm $true
         Import-Module $ModuleName -Confirm
 
         Invoke-Command -ScriptBlock $PostInstall
@@ -54,10 +54,13 @@ Install-FromChocolatey 'microsoft-windows-terminal'
 Install-FromChocolatey 'fiddler'
 Install-FromChocolatey 'postman'
 Install-FromChocolatey 'powershell-core'
-
-Install-FromChocolatey 'poshgit'
-Install-FromChocolatey 'oh-my-posh'
 Install-FromChocolatey 'nvm'
+
+
+Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
+Install-PowerShellModule 'oh-my-posh' { }
+Install-PowerShellModule 'PSReadLine' { }
+
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
 

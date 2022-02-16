@@ -54,13 +54,14 @@ Install-FromChocolatey 'microsoft-windows-terminal'
 Install-FromChocolatey 'fiddler'
 Install-FromChocolatey 'postman'
 Install-FromChocolatey 'powershell-core'
-Install-FromChocolatey 'nvm'
-
 
 Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
 Install-PowerShellModule 'oh-my-posh' { }
 Install-PowerShellModule 'PSReadLine' { }
-
+Install-PowerShellModule 'nvm' {
+    Install-NodeVersion latest
+    Set-NodeVersion -Persist User
+}
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
 

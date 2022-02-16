@@ -15,6 +15,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 Run with:
 
 ```powershell
-iex ((new-object Net.WebClient).DownloadString("https://github.com/aaronpowell/psget/blob/master/GetPsGet.ps1"))
+iex ((new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/aaronpowell/psget/master/GetPsGet.ps1"))
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/InstallTools.ps1'))
 ```

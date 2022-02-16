@@ -42,6 +42,9 @@ Install-FromChocolatey 'git'
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/master/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
 Install-FromChocolatey 'vscode'
+Install-FromChocolatey '7zip'
+Install-FromChocolatey 'autohotkey'
+Install-FromChocolatey 'greenshot'
 Install-FromChocolatey 'dotnetcore-sdk'
 Install-FromChocolatey 'microsoft-windows-terminal'
 Install-FromChocolatey 'fiddler'

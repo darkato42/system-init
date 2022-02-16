@@ -44,6 +44,7 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/
 Install-FromChocolatey 'vscode'
 Install-FromChocolatey '7zip'
 Install-FromChocolatey 'autohotkey'
+# https://github.com/darkato42/Capslock/tree/master/win
 $chocoToolsPath = ([System.Environment]::GetEnvironmentVariables('User')).ChocolateyToolsLocation
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/Capslock/master/win/CapsLock.ahk' -OutFile (Join-Path $chocoToolsPath 'CapsLock.ahk')
 

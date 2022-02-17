@@ -4,6 +4,16 @@ function Install-Chocolatey {
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
+function Install-FromWinGet {
+    param(
+        [string]
+        [Parameter(Mandatory = $true)]
+        $PackageName
+    )
+    
+    winget install $PackageName --accept-package-agreements --accept-source-agreements
+}
+
 function Install-FromChocolatey {
     param(
         [string]
@@ -36,14 +46,20 @@ function Install-PowerShellModule {
     }
 }
 
+# Use WinGet
+Install-FromWinGet 'Git.Git'
+Install-FromWinGet 'Git.GitLFS'
+Install-FromWinGet 'TortoiseGit.TortoiseGit'
+Install-FromWinGet 'Lexikos.AutoHotkey'
+Install-FromWinGet 'Microsoft.AzureCLI'
+
+# Use Choco
 Install-Chocolatey
 
-Install-FromChocolatey 'git'
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
 Install-FromChocolatey 'vscode'
 Install-FromChocolatey '7zip'
-Install-FromChocolatey 'autohotkey'
 # https://github.com/darkato42/Capslock/tree/master/win
 $chocoToolsPath = ([System.Environment]::GetEnvironmentVariables('User')).ChocolateyToolsLocation
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/Capslock/master/win/CapsLock.ahk' -OutFile (Join-Path $chocoToolsPath 'CapsLock.ahk')

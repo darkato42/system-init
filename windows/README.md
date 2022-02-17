@@ -8,6 +8,7 @@
 Run with:
 
 ```powershell
+# iex is an alias for Invoke-Expression
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupIIS.ps1'))
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupOtherWinFeatures.ps1'))
 ```
@@ -17,5 +18,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 Run with:
 
 ```powershell
+# iex is an alias for Invoke-Expression
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/InstallTools.ps1'))
 ```

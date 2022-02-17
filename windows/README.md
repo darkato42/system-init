@@ -43,3 +43,9 @@ Run with Admin PowerShell:
 # iex is an alias for Invoke-Expression
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/InstallTools.ps1'))
 ```
+
+# Azure CLI extensions
+
+```
+az extension add --name azure-devops
+```

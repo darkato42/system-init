@@ -52,6 +52,7 @@ Install-FromWinGet 'Git.GitLFS'
 Install-FromWinGet 'TortoiseGit.TortoiseGit'
 Install-FromWinGet 'Lexikos.AutoHotkey'
 Install-FromWinGet 'Microsoft.AzureCLI'
+Install-FromWinGet 'Microsoft.GitCredentialManagerCore'
 
 # Use Choco
 Install-Chocolatey

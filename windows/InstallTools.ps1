@@ -53,32 +53,30 @@ Install-FromWinGet 'TortoiseGit.TortoiseGit'
 Install-FromWinGet 'Lexikos.AutoHotkey'
 Install-FromWinGet 'Microsoft.AzureCLI'
 Install-FromWinGet 'Microsoft.GitCredentialManagerCore'
+Install-FromWinGet 'Microsoft.VisualStudioCode'
+Install-FromWinGet 'Microsoft.dotnet'
+Install-FromWinGet 'Microsoft.PowerShell'
+Install-FromWinGet 'Microsoft.WindowsTerminal'
+Install-FromWinGet 'JanDeDobbeleer.OhMyPosh'
+Install-FromWinGet '7zip.7zip'
+Install-FromWinGet 'Greenshot.Greenshot'
+Install-FromWinGet 'Postman.Postman'
+Install-FromWinGet 'Telerik.Fiddler.Everywhere'
+Install-FromWinGet 'OpenJS.NodeJS.LTS'
 
 # Use Choco
 Install-Chocolatey
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/common/.gitconfig' -OutFile (Join-Path $env:USERPROFILE '.gitconfig')
 
-Install-FromChocolatey 'vscode'
-Install-FromChocolatey '7zip'
+Install-FromChocolatey 'cmder'
+
 # https://github.com/darkato42/Capslock/tree/master/win
 $chocoToolsPath = ([System.Environment]::GetEnvironmentVariables('User')).ChocolateyToolsLocation
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/Capslock/master/win/CapsLock.ahk' -OutFile (Join-Path $chocoToolsPath 'CapsLock.ahk')
 
-Install-FromChocolatey 'greenshot'
-Install-FromChocolatey 'dotnetcore-sdk'
-Install-FromChocolatey 'microsoft-windows-terminal'
-Install-FromChocolatey 'fiddler'
-Install-FromChocolatey 'postman'
-Install-FromChocolatey 'powershell-core'
-
 Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
-Install-PowerShellModule 'oh-my-posh' { }
 Install-PowerShellModule 'PSReadLine' { }
-Install-PowerShellModule 'nvm' {
-    Install-NodeVersion latest
-    Set-NodeVersion -Persist User
-}
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
 

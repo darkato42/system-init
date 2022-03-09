@@ -25,17 +25,21 @@ The preferred order of installation methods:
 
 * Chocolatey
 * Git
-* vscode
-* 7zip
+* TortoiseGit
 * [AutoHotKey](https://www.autohotkey.com/)
-* [CapsLock Enhancement](https://github.com/darkato42/Capslock/tree/master/win)
+* Microsoft.AzureCLI
+* Microsoft.GitCredentialManagerCore
+* Microsoft.VisualStudioCode
+* Microsoft.dotnet
+* Microsoft.PowerShell
+* Microsoft.WindowsTerminal
+* OhMyPosh
+* 7zip
 * [Greenshot](https://github.com/greenshot/greenshot)
-* dotnetcore-sdk
-* microsoft-windows-terminal
-* fiddler
-* postman
-* [powershell-core](https://github.com/powershell/powershell)
-* 
+* Postman
+* Fiddler
+* NodeJS
+* [CapsLock Enhancement](https://github.com/darkato42/Capslock/tree/master/win)
 
 Run with Admin PowerShell:
 

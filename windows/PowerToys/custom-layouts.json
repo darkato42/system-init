@@ -1,0 +1,88 @@
+{
+  "custom-layouts": [
+    {
+      "uuid": "{5CCDA64C-A5E3-4D38-AFCF-864AD47CFEEE}",
+      "name": "Vertical Four",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1152,
+        "ref-height": 2008,
+        "zones": [
+          {
+            "X": 0,
+            "Y": 0,
+            "width": 1152,
+            "height": 1036
+          },
+          {
+            "X": 758,
+            "Y": 1205,
+            "width": 394,
+            "height": 803
+          },
+          {
+            "X": 0,
+            "Y": 402,
+            "width": 1152,
+            "height": 1074
+          },
+          {
+            "X": 0,
+            "Y": 1205,
+            "width": 888,
+            "height": 803
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{869B0AA6-8BE1-4D1A-8BA9-5B6678AE4DAE}",
+      "name": "Horizantal Six",
+      "type": "canvas",
+      "info": {
+        "ref-width": 3010,
+        "ref-height": 1280,
+        "zones": [
+          {
+            "X": 111,
+            "Y": 0,
+            "width": 1546,
+            "height": 1280
+          },
+          {
+            "X": 1323,
+            "Y": 0,
+            "width": 1563,
+            "height": 1280
+          },
+          {
+            "X": 0,
+            "Y": 0,
+            "width": 1204,
+            "height": 651
+          },
+          {
+            "X": 0,
+            "Y": 651,
+            "width": 1204,
+            "height": 629
+          },
+          {
+            "X": 1806,
+            "Y": 0,
+            "width": 1204,
+            "height": 646
+          },
+          {
+            "X": 1806,
+            "Y": 646,
+            "width": 1204,
+            "height": 634
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    }
+  ]
+}

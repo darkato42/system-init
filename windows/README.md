@@ -49,3 +49,11 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 ```
 az extension add --name azure-devops
 ```
+
+# Verifying commands
+
+```
+$PSVersionTable
+
+
+```

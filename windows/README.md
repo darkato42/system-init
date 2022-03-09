@@ -18,6 +18,13 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupOtherWinFeatures.ps1'))
 ```
 
+# Install Fonts
+
+Download from:
+https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode/Regular/complete
+
+Drag `.ttf` files into Font settings in Systems settings.
+
 # Install Utility Tools
 
 The preferred order of installation methods:

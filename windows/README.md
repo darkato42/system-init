@@ -64,7 +64,9 @@ az extension add --name azure-devops
 # Verifying commands
 
 ```
+// Check PowerShell Version
 $PSVersionTable
 
-
+// Replace $PROFILE
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
 ```

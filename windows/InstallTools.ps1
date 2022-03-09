@@ -78,6 +78,7 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/Capslock/mas
 Install-PowerShellModule 'Posh-Git' { Add-PoshGitToProfile -AllHosts }
 Install-PowerShellModule 'PSReadLine' { }
 Install-PowerShellModule 'nvm' { }
+Install-PowerShellModule 'Terminal-Icons' { }
 
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
 

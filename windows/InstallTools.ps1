@@ -48,7 +48,7 @@ function Install-PowerShellModule {
 
 # Use WinGet
 Install-FromWinGet 'Git.Git'
-Install-FromWinGet 'Git.GitLFS'
+Install-FromWinGet 'GitHub.GitLFS'
 Install-FromWinGet 'TortoiseGit.TortoiseGit'
 Install-FromWinGet 'Lexikos.AutoHotkey'
 Install-FromWinGet 'Microsoft.AzureCLI'

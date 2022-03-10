@@ -75,5 +75,5 @@ az extension add --name azure-devops
 
 # References
 
-[Hanselman's Posh Win Terminal](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal)
-[Hanselman's 2021 Ultimate List via WinGet](https://dvlup.com/2020/12/29/2021-ultimate-list/)
+* [Hanselman's 2021 Ultimate List via WinGet](https://dvlup.com/2020/12/29/2021-ultimate-list/)
+* [Hanselman's Posh Win Terminal](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal)

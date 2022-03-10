@@ -25,7 +25,7 @@ https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode/R
 
 Drag `.ttf` files into Font settings in Systems settings. This allows the Windows Terminal to show fancy fonts and icons.
 
-![My Fancy Terminal](/assets/posh-win-terminal.img)
+![My Fancy Terminal](../assets/posh-win-terminal.png)
 
 # Install Utility Tools
 

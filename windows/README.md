@@ -14,7 +14,10 @@ Run with Admin PowerShell:
 
 ```powershell
 # iex is an alias for Invoke-Expression
+
+# Install IIS
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupIIS.ps1'))
+# Install Containers, Hyper-V and Windows-Subsystem-Linux
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/SetupOtherWinFeatures.ps1'))
 ```
 
@@ -50,25 +53,22 @@ The preferred order of installation methods:
 * NodeJS
 * [CapsLock Enhancement](https://github.com/darkato42/Capslock/tree/master/win)
 
-Run with Admin PowerShell:
+Run [InstallTools.ps1](https://github.com/darkato42/system-init/blob/main/windows/InstallTools.ps1) with Admin PowerShell:
 
 ```powershell
 # iex is an alias for Invoke-Expression
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/darkato42/system-init/main/windows/InstallTools.ps1'))
 ```
 
-# Azure CLI extensions
-
-```
-az extension add --name azure-devops
-```
-
 # Quick Commands
 
 ```
-// Check PowerShell Version
+# Check PowerShell Version
 $PSVersionTable
 
-// Replace $PROFILE
+# Replace $PROFILE
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/Microsoft.PowerShell_profile.ps1' -OutFile $PROFILE
+
+# Install Azure CLI DevOps extension
+az extension add --name azure-devops
 ```

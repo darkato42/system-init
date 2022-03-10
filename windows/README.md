@@ -23,7 +23,9 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 Download from:
 https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode/Regular/complete
 
-Drag `.ttf` files into Font settings in Systems settings.
+Drag `.ttf` files into Font settings in Systems settings. This allows the Windows Terminal to show fancy fonts and icons.
+
+![My Fancy Terminal](/assets/posh-win-terminal.img)
 
 # Install Utility Tools
 

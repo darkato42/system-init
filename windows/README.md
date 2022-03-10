@@ -10,7 +10,7 @@
 * Hyper-V
 * Windows-Subsystem-Linux
 
-Run with Admin PowerShell:
+Run [SetupIIS.ps1](https://github.com/darkato42/system-init/blob/main/windows/SetupIIS.ps1) and [SetupOtherWinFeatures](https://github.com/darkato42/system-init/blob/main/windows/SetupOtherWinFeatures.ps1) with Admin PowerShell:
 
 ```powershell
 # iex is an alias for Invoke-Expression

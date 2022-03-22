@@ -74,6 +74,9 @@ az extension add --name azure-devops
 
 # Download FancyZones custom-layouts.json
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/darkato42/system-init/main/windows/PowerToys/custom-layouts.json' -OutFile (Join-Path $env:LOCALAPPDATA '\Microsoft\PowerToys\FancyZones\custom-layouts.json')
+
+# Upgrade winget apps
+winget upgrade --all
 ```
 
 # References

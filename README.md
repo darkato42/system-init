@@ -1,2 +1,2 @@
 # system-init
-Scripts for setting up different types of machines.
+Scripts for setting up different types of developer machines.
